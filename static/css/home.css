@@ -1,0 +1,17 @@
+.sg-home-content {
+  height: 320px;
+  padding: 0px 60px 60px 60px;
+}
+
+.news-board {
+  background-color: white;
+  width: 400px;
+  height: 100%;
+}
+
+.event-board {
+  background-color: black;
+  width: 100%;
+  height: 500px;
+  min-width: 1024px;
+}
