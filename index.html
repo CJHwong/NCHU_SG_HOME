@@ -6,6 +6,25 @@
   <link rel="stylesheet" href="static/css/sg.css">
   <link rel="stylesheet" href="static/css/home.css">
   <link rel="stylesheet" href="static/css/groundwork.css">
+  <!-- timeline CSS -->
+  <link rel="stylesheet" type="text/css" href="http://cdn.knightlab.com/libs/timeline/latest/css/timeline.css">
+  <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/timeline-min.js"></script>
+  <!-- jQuery -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <!-- BEGIN TimelineJS -->
+  <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+  <script>
+        $(document).ready(function() {
+              createStoryJS({
+                  type:       'timeline',
+                  width:      '100%',
+                  height:     '650',
+                  source:     'https://docs.google.com/spreadsheet/pub?key=0AhNuImmzoWQudDZfYjJndmNEN0VTRndBbmdYUWNZX2c&output=html',
+                  embed_id:   'my-timeline'
+                });
+        });
+  </script>
+        <!-- END TimelineJS -->
 </head>
 
 <body>
@@ -29,7 +48,10 @@
       <section class="news-board"></section>
       <section class="intro-vid"></section>
     </section>
-    <section class="event-board"></section>
+    <section class="event-board">
+      <!--timeline-->
+      <div id="my-timeline"></div>
+    </section>
   </section>
 
   <footer class="footer">
