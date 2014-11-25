@@ -1,0 +1,19 @@
+.sg-home-content {
+  height: 300px;
+  width: 100%;
+}
+
+.sg-home-content .fb-stream {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  top: calc(300px - 80px);
+  height: 80px;
+  width: 100%;
+}
+
+.event-board {
+  width: 100%;
+  height: 583px;
+
+  background-color: black;
+}
