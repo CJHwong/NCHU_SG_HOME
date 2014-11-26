@@ -11,6 +11,7 @@
 
 .sg-navigation img {
   display: inline-block;
+  width: 100%;
 }
 
 .sg-navigation nav {
