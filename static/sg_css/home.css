@@ -73,4 +73,9 @@
     top: -88px;
     height: 180px;
   }
+
+  .sg-home-content .fb-stream a {
+    position: absolute;
+    bottom: 0;
+  }
 }
