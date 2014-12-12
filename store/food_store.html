@@ -14,6 +14,45 @@
   <link rel="stylesheet" href="../static/css/font-awesome.min.css">
   <!-- jQuery -->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  
+  <script>
+
+    var names = new Array();
+    var address = new Array();
+    var phone = new Array();
+    var content = new Array();
+
+      function test(json) {
+        for (var i = 0; i < json.feed.entry.length; i++) {
+          var na = json.feed.entry[i].gsx$name.$t;
+          var ad = json.feed.entry[i].gsx$address.$t;
+          var ph = json.feed.entry[i].gsx$phone.$t;
+          var co = json.feed.entry[i].gsx$content.$t;
+          names[i] = na;
+          address[i] = ad;
+          phone[i] = ph;
+          content[i] = co;
+        }
+      }
+
+      function TableList(){
+        str = '<table class="responsive" data-max="15">';
+        str +='<thead><tr><th>店名</th><th>地址</th><th>電話</th><th>特約內容</th></tr></thead>'
+        str +='<tbody>'
+        for(var i = 0;i < names.length; i++){
+          str +='<tr><td>' + names[i] + '</td>';
+          str +='<td>' + address[i] + '</td>';
+          str +='<td>' + phone[i] + '</td>';
+          str +='<td>' + content[i] + '</td></tr>';
+        }
+        str +='</tbody></table>'
+        $("#tablelist").html(str);
+      }
+  </script>
+
+  <script type='text/javascript' src='https://spreadsheets.google.com/feeds/list/0AhNuImmzoWQudEQ1cVpnNGwzbnViazlCT2Z0U2h2VkE/od7/public/values?alt=json-in-script&callback=test'>
+  </script>
+
 </head>
 
 <body>
@@ -46,7 +85,7 @@
               <li>
                   <button>特約商店</button>
                   <ul>
-                      <li><a href="food_store.html">食篇</a></li>
+                      <li><a href="#">食篇</a></li>
                       <li><a href="life_store.html">生活篇</a></li>
                       <li><a href="hospital_store.html">醫院診所篇</a></li>
                       <li><a href="company_store.html">連鎖企業篇</a></li>
@@ -76,8 +115,13 @@
         </section>
       </div>
 
-    <section class="sg-store-wall">
-      
+    <section class="sg-store-food-wall">
+      <div class="sg-store-table" id="tablelist">
+
+      </div>
+      <script type='text/javascript'>
+        TableList()
+      </script>
     </section>
 
     <footer class="footer box black">

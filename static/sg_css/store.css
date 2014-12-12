@@ -1,4 +1,28 @@
-.sg-store-wall{
+.sg-store-food-wall{
+    width: 100%;
+    height: 5000px;
+    background-color: black;
+}
+
+.sg-store-life-wall{
     width: 100%;
     height: 1100px;
+    background-color: black;
+}
+
+.sg-store-company-wall{
+    width: 100%;
+    height: 2200px;
+    background-color: black;
+}
+
+.sg-store-hospital-wall{
+    width: 100%;
+    height: 1800px;
+    background-color: black;
+}
+
+.sg-store-table{
+    width:95%;
+    margin: 0px auto;
 }
